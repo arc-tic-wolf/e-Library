@@ -1,0 +1,211 @@
+body{
+    font: 18px/1.5 Monospace;
+    padding: 0;
+    margin:0;
+    background-color: lightgray;
+}
+
+.container{
+    width: 85%;
+    margin: auto;
+    overflow: hidden;
+}
+.button0{
+    height:38px;
+    background:orange;
+    border:0;
+    padding: 0 20px 0 20px;
+    color:white;
+    text-transform: uppercase;
+}
+ul{
+    margin:0;
+    padding:0;
+}
+.dark{
+    margin: 10px 0 10px 0;
+    
+    padding:15px;
+    color:white;
+    background-color: orangered;
+}
+header{
+    background: #35424a;
+    color:white;
+    padding-top: 30px;
+    min-height: 70px;
+    border-bottom: orange 3px solid;;
+}
+header a{
+    color:white;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 16px;
+
+}
+header li{
+    float: left;
+    display: inline;
+    padding: 0 20px 0 20px;
+}
+header #branding{
+    float:left;
+}
+header nav{
+    float:right;
+    margin-top:10px;
+}
+header #branding h1{
+    margin:0;
+}
+
+header .highlight, header .current a{
+    color:orange;
+    font-weight:bold;
+}
+header a:hover{
+    color:yellow;
+    font-weight: bolder;
+}
+#showcase{
+    min-height:500px;
+    background: url("../img/library.jpg")  ;
+    text-align:center;
+    color:white;
+    
+}
+#showcase h1{
+    margin-top:10px;
+    font-size:50px;
+    margin-bottom:10px;
+    text-transform: uppercase;
+    color:white;
+}
+
+#newsletter{
+    padding:15px;
+    color:white;
+    background: #35424a;
+}
+
+#newsletter form{
+    float:center;
+    margin-top:20px;
+
+}
+#newsletter input[type="text"]{
+    padding: 4px;
+    height:25px;
+    width:250px;
+    float:center;
+}
+#boxes {
+    margin-top:30px;
+}
+#boxes .box{
+    float:left;
+    text-align:center;
+    width:25%;
+    padding:0;
+}
+#boxes .box img{
+    width:90px;
+    height:90px;
+}
+#sidebar{
+    float:right;
+    margin-top:10px;
+    width:35%;
+}
+#col{
+    float:left;
+    width:60%;
+}
+#service li{
+    list-style:none;
+    padding:20px;
+    border:black solid 1px;
+    margin-bottom:5px;
+    background: grey;
+
+}
+.pagetitle{
+    background: black;
+    color:white;
+    width:20%;
+    text-align: center;
+}
+
+footer{
+    padding:30px;
+    margin-top:20px;
+    color:#35424a;
+    background-color: orange;
+    text-align:right;
+}
+.out{
+    padding-top:none;
+    float:right;
+    
+}
+.search{
+    padding-top:50px;
+    float:left;
+    width:50%;
+}
+@media(max-width:960px){
+    header #branding,#boxes .box,#sidebar,#col, header nav, header nav li,#newsletter h1, #newsletter form{
+        float:none;
+        text-align:center;
+        width:100%;
+
+    }
+    .pagetitle{
+        width:35%;
+    }
+    header {
+        padding-bottom:20px;
+    }
+    #showcase h1{
+        margin-top:40px;
+    }
+    #newsletter button{
+        display:block;
+        width:100%;
+    }
+    #newsletter form input[type="text"]{
+        width:100%;
+        margin-top:5px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

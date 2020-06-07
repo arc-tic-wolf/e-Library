@@ -1,0 +1,28 @@
+<%-include('partials/go')-%>
+
+<title>Most Sold </title>
+<%-include('partials/heading')-%>
+<ul>
+    <li> <a href="user">Home</a></li>
+    
+    
+    <li class="current"> <a href="#">Popular Books</a></li>
+    <li> <a href="noauthor">Authors</a></li>
+    <li> <a href="noauthor">About us</a></li>
+    
+</ul>
+<%-include('partials/mid')-%>
+
+    <div class="container">
+        <article id="col">
+            <h1 class="pagetitle">Hot picks</h1>
+            <ul id="service">
+                <% rows.forEach((writer)=>{ %>
+                    <li> Name: <%=writer.Book_name %> &nbsp;Copies Sold:<%=writer.num %></li>
+                
+                <%});%>
+            </ul>
+        </article>
+    </div>
+
+<%-include('partials/ending')-%>

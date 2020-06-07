@@ -1,0 +1,27 @@
+<%-include('partials/go')-%>
+
+<title>Sales </title>
+<%-include('partials/heading')-%>
+<ul>
+    <li> <a href="home">Home</a></li>
+    <li> <a href="author">Authors</a></li>
+    <li class="current"> <a href="#">Sales-Info</a></li>
+    <li> <a href="list">Demand-List</a></li>
+    
+</ul>
+<%-include('partials/mid')-%>
+
+    <div class="container">
+        <article id="col">
+            <h1 class="pagetitle">Sales Details</h1>
+            <ul id="service">
+                <li>Cart_id &nbsp; Date &nbsp;&nbsp; Revenue&nbsp;</li>
+                <% rows.forEach((writer)=>{ %>
+                    <li><%=writer.Cart_id %> &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;<%=writer.date %> &nbsp;&nbsp;&nbsp;<%=writer.Revenue %> </li>
+                
+                <%});%>
+            </ul>
+        </article>
+    </div>
+
+<%-include('partials/ending')-%>

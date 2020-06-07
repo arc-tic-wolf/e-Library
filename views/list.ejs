@@ -1,0 +1,28 @@
+<%-include('partials/go')-%>
+
+<title>Our Demands </title>
+<%-include('partials/heading')-%>
+<ul>
+    <li> <a href="home">Home</a></li>
+    <li> <a href="author">Authors</a></li>
+    <li> <a href="sales">Sales-Info</a></li>
+    <li class="current"> <a href="#">Demand-List</a></li>
+    
+</ul>
+<%-include('partials/mid')-%>
+
+<div class="container">
+    <article id="col">
+        <h1 class="pagetitle">List of Demands</h1>
+        <ul id="service">
+            <% rows.forEach((writer)=>{ %>
+            <li> Sl: <%=writer.Serial %> &nbsp; Name: <%=writer.Book_name %>  &nbsp;Author: <%=writer.Author %> &nbsp;Version: <%=writer.Version %> </li>
+
+            <%});%>
+        </ul>
+</div>
+
+
+
+
+<%-include('partials/ending')-%>

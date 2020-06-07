@@ -1,0 +1,53 @@
+
+<%-include('partials/go')-%>
+
+<title>Welcome </title>
+<%-include('partials/heading')-%>
+<ul>
+    <li class="current"> <a href="#">Home</a></li>
+    <li ><a href="cart">Shop Cart</a></li>
+    <li><a href="popular">Popular Books</a></li>
+  <li> <a href="noauthor">Authors</a></li>
+  <li> <a href="demand">Demand Book</a></li>
+  <li> <a href="noabout">About us</a></li>
+</ul>
+<%-include('partials/mid')-%>
+
+
+<section id="newsletter">
+  <div class="container">
+      
+      
+      <form action="out" method ="POST" class='out'>
+      
+            <h3>logged in as</h3>
+            <h1><%=username %></h1>
+            <button type="logout" class="button0">logout</button>
+            
+            
+      
+        </form>
+        <form action="nosearch" method="POST" class='search'>
+          
+                <button type="submit" class="button0">SEARCH</button>
+                <input type="text"  placeholder="search for books" name ="keyword">
+          </form>
+  </div>
+</section>
+<br>
+<div class="container">
+    <article id="col">
+        
+        <ul id="service">
+            <% rows.forEach((writer)=>{ %>
+              <form action="buy/<%= writer.id %>" method="POST">
+            <li> <%=writer.Book_name %><br>  Author: <%=writer.name %>  &nbsp;Price: <%=writer.price %> &nbsp;Version: <%=writer.version %> &nbsp;Size: <%=writer.size %> mb<br><button type='submit' class='button0' >Buy</button></li>
+              </form>
+            <%});%>
+        </ul>
+</div>
+<br>
+
+
+
+<%-include('partials/ending')-%>

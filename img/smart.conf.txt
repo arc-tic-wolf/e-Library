@@ -1,0 +1,32 @@
+# Enables connection to GUI
+management /data/data/de.blinkt.openvpn/cache/mgmtsocket unix
+management-client
+management-query-passwords
+management-hold
+machine-readable-output
+verb 4
+connect-retry-max 5
+connect-retry 5 300
+#resolv-retry 60
+dev tun
+remote 192.168.42.128 13444 tcp-client
+comp-lzo
+ifconfig 192.168.7.34 255.255.255.252
+route 0.0.0.0 0.0.0.0 vpn_gateway
+dhcp-option DNS 8.8.4.4
+dhcp-option DNS 8.8.4.4
+dhcp-option DOMAIN blinkt.de
+nobind
+persist-tun
+#persist-tun also enables pre resolving to avoid DNS resolve problem
+# Use system proxy setting
+management-query-proxy
+# Custom configuration options
+# You are on your on own here :)
+mute-replay-warnings
+resolv-retry infinite
+keepalive 10 60
+ping-timer-rem
+<secret>
+
+</secret>

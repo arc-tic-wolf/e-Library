@@ -1,0 +1,27 @@
+<%-include('partials/go')-%>
+
+<title>Our Writers </title>
+<%-include('partials/heading')-%>
+<ul>
+    <li> <a href="user">Home</a></li>
+    <li><a href="popular">Popular Books</a></li>
+    <li class="current"> <a href="#">Authors</a></li>
+    <li> <a href="noabout">About us</a></li>
+</ul>
+<%-include('partials/mid')-%>
+
+<div class="container">
+    <article id="col">
+        <h1 class="pagetitle">AUTHORS</h1>
+        <ul id="service">
+            <% rows.forEach((writer)=>{ %>
+            <li> Id: <%=writer.Id %> &nbsp; Name: <%=writer.Name %>  &nbsp;Genre: <%=writer.Genre %> </li>
+
+            <%});%>
+        </ul>
+</div>
+
+
+
+
+<%-include('partials/ending')-%>
